@@ -1,0 +1,40 @@
+var todolist=[]
+var checkboxes=0
+// var list=document.querySelectorAll("listitem")
+function refreshtable() {
+  // $("table").html("")
+  var temp=""
+  var qbool=false
+  for (var i = 0; i < todolist.length;i++)
+  {
+    qbool=document.querySelectorAll('td>span')
+
+    if(qbool)
+    temp=temp+'<tr><td><input type="checkbox"></td><td><span class="done">'+todolist[i-1]+"</span></td></tr>"
+    else
+    temp=temp+'<tr><td><input type="checkbox"></td><td><span>'+todolist[i]+"</span></td></tr>"
+  }
+  $("table").html(temp)
+  checkout()
+}
+
+
+function checkout() {
+  $("td span").each(function () {
+    $(this).on("click",function () {
+      $(this).toggleClass("done")
+    })
+  })
+}
+
+$("#addtolist").on("click",function () {
+  todolist[todolist.length]=$("#newitem").val()
+  refreshtable()
+  $("#newitem").val("")
+})
+
+$("#removefromlist").on("click",function () {
+  todolist=$('input[type="checkbox"]').val()
+  refreshtable()
+  $("#newitem").val("")
+})

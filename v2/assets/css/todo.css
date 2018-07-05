@@ -1,0 +1,61 @@
+body{
+  background: linear-gradient(to right, rgba(100,140,250,0.7), rgba(100,180,220,0.7), rgba(100,220,200,0.7), rgba(100,250,220,0.7));
+}
+
+.main{
+  width: 60%;
+  background: rgba(100,100,100,0.4);
+  height: calc(100vh);
+}
+
+.done{
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+td{
+  padding: 5px 10px;
+  margin: auto 20%;
+}
+
+.mylist{
+  background: rgba(200,200,200,0.2);
+  padding:1px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: calc(70vh);
+  overflow-y: scroll;
+  border: 1px solid white;
+}
+.mylist *{
+  font-size: 15px;
+}
+#addtolist,#removefromlist{
+  border: 1px solid black;
+  height: 30px;
+  font-weight: bold;
+  font-size: 80%;
+  padding: 2%
+}
+
+
+input[type=checkbox]{
+  margin: 5px;
+}
+
+h1{
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  font-family: Acme;
+  text-decoration: overline;
+}
+
+input[type=text]{
+  height: 30px
+  }
+h4{
+  color:white;
+  font-family: Acme
+}
