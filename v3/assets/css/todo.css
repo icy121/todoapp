@@ -1,0 +1,100 @@
+body{
+  /* background: linear-gradient(to right, rgba(100,140,250,0.7), rgba(100,180,220,0.7), rgba(100,220,200,0.7), rgba(100,250,220,0.7)); */
+  background: #EECDA3;
+  background: -webkit-linear-gradient(to left, #EF629F, #EECDA3);
+  background: linear-gradient(to left, #EF629F, #EECDA3);
+}
+
+.main{
+  width: 60%;
+  background: rgba(100,100,100,0.4);
+  height: calc(100vh);
+}
+
+h1{
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  font-family: Acme;
+  text-decoration: overline;
+}
+
+input[type=text]{
+  height: 30px
+}
+
+h4{
+  color:white;
+  font-family: Acme
+}
+
+#addtolist,#removefromlist{
+  border: 1px solid black;
+  height: 30px;
+  font-weight: bold;
+  font-size: 100%;
+  padding: 2%
+}
+
+.mylist{
+  background: rgba(200,200,200,0.2);
+  padding:1px;
+  padding-bottom: 2%;
+  overflow-y: scroll;
+  border: 10px solid #EF98A1;
+  font-size: 20px;
+}
+
+.done{
+  text-decoration: line-through;
+  opacity: 0.4;
+  text-decoration-color: rgb(80, 80, 80);
+}
+
+#list{
+  padding-left: 0
+}
+
+li{
+  transition: background-color 0.5s ease;
+  margin: 0.2%;
+  list-style-type: none;
+  padding: 0.3%;
+  border-bottom: 1px solid white;
+  padding-left: 5%;
+  line-height: 25px
+}
+
+hr{
+  padding: 0;
+}
+
+.trashcan{
+  margin: auto;
+  margin-right: 5%;
+  padding: 0.5% 2%;
+  background-color: rgba(200,48,43,1);
+  color: white;
+}
+
+@media only screen and (min-width : 200px) and (max-width : 480px) {
+  .mylist{
+    height: calc(50vh);
+  }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 992px) {
+  .mylist{
+    height: calc(60vh);
+  }
+}
+
+@media only screen and (min-width : 992px) and (orientation : landscape) {
+  .main{
+    height: calc(100vh);
+  }
+  .mylist{
+    height: calc(70vh);
+  }
+}
